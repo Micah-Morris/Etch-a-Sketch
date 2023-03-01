@@ -1,9 +1,11 @@
 #container {
+    height: 95vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    aspect-ratio: 1;
 }
 
 .box{
-   outline: solid;
-    height: 40px;
+    border: 1px solid black;
+   
 }
