@@ -1,9 +1,21 @@
 
 let gridSize = 16
 
+function deleteGrid() {
+    const boxes = document.querySelectorAll('.square');
+
+        boxes.forEach(square => {
+        square.remove();
+});
+
+    }
+
 let button = document.querySelector('.button');
 button.addEventListener('click', function() {
-   gridSize = prompt('Enter Size');
+   let entry = prompt('Enter Size');
+   gridSize = entry * entry
+   deleteGrid()
+   document.getElementById("container").style.gridTemplateColumns = "repeat(" + entry + ", 1fr)";
    createGrid()
 })
 function createGrid() {
@@ -12,6 +24,8 @@ for (let index = 0; index < gridSize; index++) {
     newBox.classList.add('square')
     newBox.id = index
     document.getElementById('container').appendChild(newBox);
+    
+
 }
 
 
