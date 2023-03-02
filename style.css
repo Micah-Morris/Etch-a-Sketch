@@ -2,8 +2,6 @@
     height: 95vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-   
-   
 }
 
 .wrapper{
