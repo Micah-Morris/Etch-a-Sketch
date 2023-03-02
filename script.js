@@ -1,14 +1,26 @@
 
 let gridSize = 16
 
+
 for (let index = 0; index < gridSize; index++) {
     const newBox = document.createElement('div');
-    newBox.classList.add('box')
+    newBox.classList.add('square')
+    newBox.id = index
     document.getElementById('container').appendChild(newBox);
 }
-function changeColor() {
-    box.classList.add('black');
-}
+let box = document.querySelectorAll('.square');
 
-let box = document.querySelector('.box');
- box.addEventListener("mouseover", function() { changeColor() });
+ for (let index = 0; index < box.length; index++) {
+    let i = index.toString()
+    let position = document.getElementById(i);
+    
+    position.addEventListener('mouseover' , 
+    function changeColor() {
+        position.classList.add('black');
+        
+    })
+ };
+ 
+ 
+
+ 
